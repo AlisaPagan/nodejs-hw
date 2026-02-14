@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlisaPagan/nodejs-hw.git"
+  },
+  "keywords": [],
+  "author": "Alisa Pagan <alisapodgaynaya023@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlisaPagan/nodejs-hw/issues"
+  },
+  "homepage": "https://github.com/AlisaPagan/nodejs-hw#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.0",
+    "globals": "^17.3.0",
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}
