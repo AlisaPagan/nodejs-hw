@@ -1,4 +1,4 @@
-import HttpError from 'http-errors';
+import { HttpError } from 'http-errors';
 
 export const errorHandler = (err, _req, res, _next) => {
   if (err instanceof HttpError) {
@@ -10,6 +10,6 @@ export const errorHandler = (err, _req, res, _next) => {
   const isProd = process.env.NODE_ENV === 'production';
 
   res.status(500).json({
-    message: isProd ? 'Note not found' : err.message,
+    message: isProd ? 'Internal server error' : err.message,
   });
 };
