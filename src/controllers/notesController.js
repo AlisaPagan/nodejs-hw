@@ -1,5 +1,5 @@
 import createHttpError from 'http-errors';
-import { Note } from '../models/notes.js';
+import { Note } from '../models/note.js';
 
 // ====== GET NOTES ======
 export const getAllNotes = async (_req, res) => {
