@@ -7,6 +7,8 @@ import { errorHandler } from './middleware/errorHandler.js';
 import { connectMongoDB } from './db/connectMongoDB.js';
 import notesRouter from './routes/notesRoutes.js';
 import { errors } from 'celebrate';
+import authRouter from './routes/authRoutes.js';
+import cookieParser from 'cookie-parser';
 
 const app = express();
 const PORT = process.env.PORT ?? 3000;
@@ -14,7 +16,9 @@ const PORT = process.env.PORT ?? 3000;
 app.use(express.json());
 app.use(cors());
 app.use(logger);
+app.use(cookieParser());
 
+app.use(authRouter);
 app.use(notesRouter);
 
 app.use(notFoundHandler);
